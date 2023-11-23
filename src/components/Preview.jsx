@@ -7,7 +7,7 @@ const Preview = () => {
  console.log(JSON.stringify(StepTwoData))
  console.log(JSON.stringify(StepThreeData))
  return (
-    <div className="container mx-auto mt-8">
+    <div className="container mx-auto mt-8 mb-4 pb-4">
       <div className="bg-gray-100 p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Step One Data</h2>
         <div className="grid grid-cols-2 gap-4">
@@ -42,18 +42,21 @@ const Preview = () => {
         </div>
       </div>
 
-      <div className="bg-gray-100 p-6 mt-6 rounded-lg shadow-md">
+      <div className="bg-gray-100 p-6  mt-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-semibold mb-4">Step Three Data</h2>
         <div className="grid grid-cols-2 gap-4">
           <div>
-            <p><strong>First Name:</strong> {StepThreeData.first_name}</p>
-            <p><strong>Last Name:</strong> {StepThreeData.last_name}</p>
-            <p><strong>Email:</strong> {StepThreeData.email}</p>
-            <p><strong>Phone:</strong> {StepThreeData.phone}</p>
+            <p><strong>Height:</strong> {StepThreeData.height}</p>
+            <p><strong>Date Of Birth:</strong> {StepThreeData.dob}</p>
+            <p><strong>Division:</strong> {StepThreeData.division}</p>
+            <p><strong>District:</strong> {StepThreeData.district}</p>
+            <p><strong>Monthly Income:</strong> {StepThreeData.monthly_income}</p>
+            <p><strong>Monthly Expenses:</strong> {StepThreeData.monthly_expenses}</p>
           </div>
           <div>
-            <p><strong>Roll:</strong> {StepThreeData.roll}</p>
-            <p><strong>Reg:</strong> {StepThreeData.reg}</p>
+            <p><strong>Present Address:</strong> {StepThreeData.present_address}</p>
+            <p><strong>Permanent Address:</strong> {StepThreeData.permanent_address}</p>
+
           </div>
         </div>
       </div>

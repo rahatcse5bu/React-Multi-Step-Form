@@ -3,7 +3,7 @@ import { PersonalDataContext } from '../context/FormData';
 
 const StepThree = () => {
     // var [stepThreeData,setStepThree]= useState({});
-    const { setStepThree } = useContext(PersonalDataContext)
+    const { setStepThree,StepThreeData } = useContext(PersonalDataContext)
 
     // function handleNext(){
     //     console.log(stepThreeData);
@@ -15,12 +15,12 @@ const StepThree = () => {
 <div className="grid grid-cols-2 gap-4">
   <div>
     <label htmlFor="firstName" className="block text-sm font-medium text-white">
-      First Name 3
+      Height
     </label>
-    <input
-      type="text" placeholder='Md.' onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.height}
+      type="text" placeholder='5 feet 3 inch.' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        first_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        height: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -28,12 +28,12 @@ const StepThree = () => {
   </div>
   <div>
     <label htmlFor="lastName" className="block text-sm font-medium text-white">
-      Last Name 3
+      Date of Birth
     </label>
-    <input
-      type="text" placeholder='Rahat' onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.dob}
+      type="date" placeholder='09-01-1998' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        last_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        dob: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -44,26 +44,26 @@ const StepThree = () => {
  {/* Email & Phone Number  */}
 <div className="grid grid-cols-2 gap-4 py-4">
   <div>
-    <label htmlFor="email" className="block text-sm font-medium text-white">
-      Email 3
+    <label htmlFor="division" className="block text-sm font-medium text-white">
+      Division
     </label>
-    <input
-      type="email" placeholder='rahat.cse5.bu@gmail.com' onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.division}
+      type="text" placeholder='Barisal' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        email: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        division: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
     />
   </div>
   <div>
-    <label htmlFor="phone" className="block text-sm font-medium text-white">
-      Phone Number
+    <label htmlFor="district" className="block text-sm font-medium text-white">
+      District
     </label>
-    <input
-      type="text" placeholder='+8801793278360' onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.district}
+      type="text" placeholder='Barguna Sadar' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        phone: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        district: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border  border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -74,77 +74,56 @@ const StepThree = () => {
   {/* Department & Batch */}
 <div className="grid grid-cols-2 gap-4 pb-4">
   <div>
-    <label htmlFor="dept" className="block text-sm font-medium text-white">
-      Department
+    <label htmlFor="present_address" className="block text-sm font-medium text-white">
+      Present Address
     </label>
-    <select onChange={(e)=>{setStepThree((prevObject) => ({
+    <textarea value={StepThreeData.present_address} onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        dept: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        present_address: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"  
     >
-<option className='' selected> CSE</option>
-<option className=''> Bio Chemistry</option>
-<option className=''> Chemistry</option>
-<option className=''> Physics</option>
-<option className=''> Geology</option>
-<option className=''> History</option>
-<option className=''> Statistics</option>
 
-    </select>
+    </textarea>
   </div>
   <div>
-    <label htmlFor="batch" className="block text-sm font-medium text-white">
-      Batch
+    <label htmlFor="permanent_address" className="block text-sm font-medium text-white">
+      Permanent Address
     </label>
-    <select onChange={(e)=>{setStepThree((prevObject) => ({
+    <textarea value={StepThreeData.permanent_address} onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        batch: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        permanent_address: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"  
     >
-<option className=''> 1st</option>
-<option className=''> 2nd</option>
-<option className=''> 3rd</option>
-<option className=''> 4th</option>
-<option className='' selected> 5th</option>
-<option className=''> 6th</option>
-<option className=''> 7th</option>
-<option className=''> 8th</option>
-<option className=''> 9th</option>
-<option className=''> 10th</option>
-<option className=''> 11th</option>
-<option className=''> 12th</option>
-<option className=''> 13th</option>
-
-    </select>
+    </textarea>
   </div>
 </div>
  {/* End of Dept & Batch  */}
  {/* Roll & Reg Number  */}
 <div className="grid grid-cols-2 gap-4 pb-4">
   <div>
-    <label htmlFor="roll" className="block text-sm font-medium text-white">
-      Roll
+    <label htmlFor="monthly_income" className="block text-sm font-medium text-white">
+      Monthly Income
     </label>
-    <input onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.monthly_income} onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        roll: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        monthly_income: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
-      type="text" placeholder='18CSE026'
+      type="text" placeholder='30,000 BDT'
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
     />
   </div>
   <div>
-    <label htmlFor="reg" className="block text-sm font-medium text-white">
-      Registration Number
+    <label htmlFor="expense" className="block text-sm font-medium text-white">
+      Monthly Expenses
     </label>
-    <input onChange={(e)=>{setStepThree((prevObject) => ({
+    <input value={StepThreeData.monthly_expenses} onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
-        reg: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        monthly_expenses: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
-      type="text" placeholder='110-026-18'
+      type="text" placeholder='27,345 BDT'
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
     />

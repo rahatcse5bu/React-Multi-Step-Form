@@ -3,7 +3,7 @@ import { PersonalDataContext } from '../context/FormData';
 
 const StepTwo = () => {
     // var [stepTwoData,setStepTwo]= useState({});
-    const { setStepTwo } = useContext(PersonalDataContext)
+    const { setStepTwo,StepTwoData } = useContext(PersonalDataContext)
 
     // function handleNext(){
     //     console.log(stepTwoData);
@@ -18,7 +18,7 @@ const StepTwo = () => {
       Father`s Name
     </label>
     <input
-      type="text" placeholder='Md.' onChange={(e)=>{setStepTwo((prevObject) => ({
+      type="text" value={StepTwoData.father_name} placeholder='Md.' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         father_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -31,7 +31,7 @@ const StepTwo = () => {
       Mother`s Name
     </label>
     <input
-      type="text" placeholder='Rahat' onChange={(e)=>{setStepTwo((prevObject) => ({
+      type="text" value={StepTwoData.mother_name} placeholder='Rahat' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         mother_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -48,7 +48,7 @@ const StepTwo = () => {
       CGPA
     </label>
     <input
-      type="cgpa" placeholder='3.96' onChange={(e)=>{setStepTwo((prevObject) => ({
+      type="cgpa" value={StepTwoData.cgpa} placeholder='3.96' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         cgpa: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -61,7 +61,7 @@ const StepTwo = () => {
       Weight
     </label>
     <input
-      type="text" placeholder='58 KG' onChange={(e)=>{setStepTwo((prevObject) => ({
+      type="text" value={StepTwoData.weight} placeholder='58 KG' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         weight: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -77,7 +77,7 @@ const StepTwo = () => {
     <label htmlFor="blood_group" className="block text-sm font-medium text-white">
       Blood Group
     </label>
-    <select onChange={(e)=>{setStepTwo((prevObject) => ({
+    <select value={StepTwoData.blood_group} onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         blood_group: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -95,10 +95,10 @@ const StepTwo = () => {
     </select>
   </div>
   <div>
-    <label htmlFor="batch" className="block text-sm font-medium text-white">
+    <label htmlFor="gender" className="block text-sm font-medium text-white">
       Gender
     </label>
-    <select onChange={(e)=>{setStepTwo((prevObject) => ({
+    <select value={StepTwoData.gender} onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         gender: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -119,7 +119,7 @@ const StepTwo = () => {
     <label htmlFor="roll" className="block text-sm font-medium text-white">
       Semester
     </label>
-    <input onChange={(e)=>{setStepTwo((prevObject) => ({
+    <input value={StepTwoData.semester} onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         semester: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -132,7 +132,7 @@ const StepTwo = () => {
     <label htmlFor="session" className="block text-sm font-medium text-white">
       Session
     </label>
-    <input onChange={(e)=>{setStepTwo((prevObject) => ({
+    <input value={StepTwoData.session} onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
         session: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
