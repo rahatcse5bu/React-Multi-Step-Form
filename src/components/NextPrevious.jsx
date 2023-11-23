@@ -19,9 +19,9 @@ console.log('step=> '+step)
     }
     return (
         <div className=' flex align-middle items-center justify-end'>
-            <button onClick={handlePrevious} className=' bg-slate-950 inline text-right text-white px-4 py-2 mr-4 rounded-md'>Previous</button>
+            <button onClick={handlePrevious} className=' bg-blue-900 inline text-right text-white px-4 py-2 mr-4 rounded-md'>Previous</button>
 
-            <button onClick={handleNext} className='  bg-slate-950 inline text-right text-white px-4 py-2 rounded-md'>{step==4? 'Submit':'Next'}</button>
+            <button onClick={handleNext} className='  bg-blue-900 inline text-right text-white px-4 py-2 rounded-md'>{step==4? 'Submit':'Next'}</button>
  
         </div>
     );
