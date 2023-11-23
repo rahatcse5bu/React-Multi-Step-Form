@@ -12,7 +12,8 @@ const FormWrapper = () => {
     const { personalData,step,setStep,StepOneData,StepTwoData,StepThreeData,setStepOne,setStepTwo,setStepThree } = useContext(PersonalDataContext)
 
     return (
-        <div className="mx-auto bg-slate-900 w-[450px] px-4 py-8 mt-8 rounded-lg">
+        <div className="relative mx-auto bg-slate-900 w-[450px] px-4 py-8 mt-8 rounded-lg">
+            
             <p className="text-center text-white">Allahu Akbar</p>
             <FormHeader/>
             <Progress/>

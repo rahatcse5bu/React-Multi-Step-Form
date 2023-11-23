@@ -27,7 +27,7 @@ const PersonalDataProvider = (props) => {
 const [StepOneData,setStepOne] = useState(StepOneSavedData);
 const [StepTwoData,setStepTwo] =useState(StepTwoSavedData);
 const [StepThreeData,setStepThree] =useState(StepThreeSavedData);
-console.log('jhh'+JSON.stringify(StepOneSavedData));
+// console.log('jhh'+JSON.stringify(StepOneSavedData));
 const [step, setStep] = useState(1);
   // Save data to local storage whenever it changes
   useEffect(() => {
