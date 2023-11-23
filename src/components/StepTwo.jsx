@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import { PersonalDataContext } from '../context/FormData';
 
-const StepOne = () => {
-    // var [stepOneData,setStepOne]= useState({});
-    const { setStepOne } = useContext(PersonalDataContext)
+const StepTwo = () => {
+    // var [stepTwoData,setStepTwo]= useState({});
+    const { setStepTwo } = useContext(PersonalDataContext)
 
     // function handleNext(){
-    //     console.log(StepOneData);
-    //     setStepOne(StepOneData)
-    //     alert(JSON.stringify(StepOneData))
+    //     console.log(stepTwoData);
+    //     alert(JSON.stringify(stepTwoData))
     // }
     return (
         <div className='step-one text-white px-2 pt-4 pb-2 mt-4 rounded-lg'>
@@ -16,12 +15,12 @@ const StepOne = () => {
 <div className="grid grid-cols-2 gap-4">
   <div>
     <label htmlFor="firstName" className="block text-sm font-medium text-white">
-      First Name
+      Father`s Name
     </label>
     <input
-      type="text" placeholder='Md.' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='Md.' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        first_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        father_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -29,12 +28,12 @@ const StepOne = () => {
   </div>
   <div>
     <label htmlFor="lastName" className="block text-sm font-medium text-white">
-      Last Name
+      Mother`s Name
     </label>
     <input
-      type="text" placeholder='Rahat' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='Rahat' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        last_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        mother_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -45,26 +44,26 @@ const StepOne = () => {
  {/* Email & Phone Number  */}
 <div className="grid grid-cols-2 gap-4 py-4">
   <div>
-    <label htmlFor="email" className="block text-sm font-medium text-white">
-      Email
+    <label htmlFor="cgpa" className="block text-sm font-medium text-white">
+      CGPA
     </label>
     <input
-      type="email" placeholder='rahat.cse5.bu@gmail.com' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="cgpa" placeholder='3.96' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        email: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        cgpa: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
     />
   </div>
   <div>
-    <label htmlFor="phone" className="block text-sm font-medium text-white">
-      Phone Number
+    <label htmlFor="weight" className="block text-sm font-medium text-white">
+      Weight
     </label>
     <input
-      type="text" placeholder='+8801793278360' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='58 KG' onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        phone: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        weight: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border  border-gray-300 rounded-md text-black focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
@@ -75,48 +74,40 @@ const StepOne = () => {
   {/* Department & Batch */}
 <div className="grid grid-cols-2 gap-4 pb-4">
   <div>
-    <label htmlFor="dept" className="block text-sm font-medium text-white">
-      Department
+    <label htmlFor="blood_group" className="block text-sm font-medium text-white">
+      Blood Group
     </label>
-    <select onChange={(e)=>{setStepOne((prevObject) => ({
+    <select onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        dept: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        blood_group: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"  
     >
-<option className='' selected> CSE</option>
-<option className=''> Bio Chemistry</option>
-<option className=''> Chemistry</option>
-<option className=''> Physics</option>
-<option className=''> Geology</option>
-<option className=''> History</option>
-<option className=''> Statistics</option>
+<option className='' selected> A+</option>
+<option className=''> A-</option>
+<option className=''> B+</option>
+<option className=''> B-</option>
+<option className=''> AB+</option>
+<option className=''> AB-</option>
+<option className=''> O+</option>
+<option className=''> O-</option>
 
     </select>
   </div>
   <div>
     <label htmlFor="batch" className="block text-sm font-medium text-white">
-      Batch
+      Gender
     </label>
-    <select onChange={(e)=>{setStepOne((prevObject) => ({
+    <select onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        batch: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        gender: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"  
     >
-<option className=''> 1st</option>
-<option className=''> 2nd</option>
-<option className=''> 3rd</option>
-<option className=''> 4th</option>
-<option className='' selected> 5th</option>
-<option className=''> 6th</option>
-<option className=''> 7th</option>
-<option className=''> 8th</option>
-<option className=''> 9th</option>
-<option className=''> 10th</option>
-<option className=''> 11th</option>
-<option className=''> 12th</option>
-<option className=''> 13th</option>
+<option className='' selected> Male</option>
+<option className=''> Female</option>
+<option className=''> Not Prefer To Say</option>
+
 
     </select>
   </div>
@@ -126,24 +117,24 @@ const StepOne = () => {
 <div className="grid grid-cols-2 gap-4 pb-4">
   <div>
     <label htmlFor="roll" className="block text-sm font-medium text-white">
-      Roll
+      Semester
     </label>
-    <input onChange={(e)=>{setStepOne((prevObject) => ({
+    <input onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        roll: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        semester: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
-      type="text" placeholder='18CSE026'
+      type="text" placeholder='8th'
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"
       // Add any other input properties or event handlers as needed
     />
   </div>
   <div>
-    <label htmlFor="reg" className="block text-sm font-medium text-white">
-      Registration Number
+    <label htmlFor="session" className="block text-sm font-medium text-white">
+      Session
     </label>
-    <input onChange={(e)=>{setStepOne((prevObject) => ({
+    <input onChange={(e)=>{setStepTwo((prevObject) => ({
         ...prevObject,
-        reg: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
+        session: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
       type="text" placeholder='110-026-18'
       className="mt-1 p-2 border text-black border-gray-300 rounded-md focus:outline-none focus:ring focus:border-blue-300 block w-full"
@@ -156,4 +147,4 @@ const StepOne = () => {
     );
 };
 
-export default StepOne;
+export default StepTwo;

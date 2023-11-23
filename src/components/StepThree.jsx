@@ -1,14 +1,13 @@
 import React, { useContext } from 'react';
 import { PersonalDataContext } from '../context/FormData';
 
-const StepOne = () => {
-    // var [stepOneData,setStepOne]= useState({});
-    const { setStepOne } = useContext(PersonalDataContext)
+const StepThree = () => {
+    // var [stepThreeData,setStepThree]= useState({});
+    const { setStepThree } = useContext(PersonalDataContext)
 
     // function handleNext(){
-    //     console.log(StepOneData);
-    //     setStepOne(StepOneData)
-    //     alert(JSON.stringify(StepOneData))
+    //     console.log(stepThreeData);
+    //     alert(JSON.stringify(stepThreeData))
     // }
     return (
         <div className='step-one text-white px-2 pt-4 pb-2 mt-4 rounded-lg'>
@@ -16,10 +15,10 @@ const StepOne = () => {
 <div className="grid grid-cols-2 gap-4">
   <div>
     <label htmlFor="firstName" className="block text-sm font-medium text-white">
-      First Name
+      First Name 3
     </label>
     <input
-      type="text" placeholder='Md.' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='Md.' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         first_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -29,10 +28,10 @@ const StepOne = () => {
   </div>
   <div>
     <label htmlFor="lastName" className="block text-sm font-medium text-white">
-      Last Name
+      Last Name 3
     </label>
     <input
-      type="text" placeholder='Rahat' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='Rahat' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         last_name: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -46,10 +45,10 @@ const StepOne = () => {
 <div className="grid grid-cols-2 gap-4 py-4">
   <div>
     <label htmlFor="email" className="block text-sm font-medium text-white">
-      Email
+      Email 3
     </label>
     <input
-      type="email" placeholder='rahat.cse5.bu@gmail.com' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="email" placeholder='rahat.cse5.bu@gmail.com' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         email: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -62,7 +61,7 @@ const StepOne = () => {
       Phone Number
     </label>
     <input
-      type="text" placeholder='+8801793278360' onChange={(e)=>{setStepOne((prevObject) => ({
+      type="text" placeholder='+8801793278360' onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         phone: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -78,7 +77,7 @@ const StepOne = () => {
     <label htmlFor="dept" className="block text-sm font-medium text-white">
       Department
     </label>
-    <select onChange={(e)=>{setStepOne((prevObject) => ({
+    <select onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         dept: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -98,7 +97,7 @@ const StepOne = () => {
     <label htmlFor="batch" className="block text-sm font-medium text-white">
       Batch
     </label>
-    <select onChange={(e)=>{setStepOne((prevObject) => ({
+    <select onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         batch: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -128,7 +127,7 @@ const StepOne = () => {
     <label htmlFor="roll" className="block text-sm font-medium text-white">
       Roll
     </label>
-    <input onChange={(e)=>{setStepOne((prevObject) => ({
+    <input onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         roll: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -141,7 +140,7 @@ const StepOne = () => {
     <label htmlFor="reg" className="block text-sm font-medium text-white">
       Registration Number
     </label>
-    <input onChange={(e)=>{setStepOne((prevObject) => ({
+    <input onChange={(e)=>{setStepThree((prevObject) => ({
         ...prevObject,
         reg: e.target.value, // Replace 'newKey' and 'newValue' with your desired key-value pair
       }))}}
@@ -156,4 +155,4 @@ const StepOne = () => {
     );
 };
 
-export default StepOne;
+export default StepThree;
